@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 # writen by leon
+#writen time :2019/10/19
 
 import random
 import codecs
@@ -33,7 +34,7 @@ print(deck)
 
 
 #stard shuffle
-print('=========================cutting line===============================')
+print('-------===========<<<([{  cutting line  }])>>>============-------')
 shuffled_deck=[]
 
 '''
@@ -43,12 +44,16 @@ for times in range(0,len(deck)):
     deck.remove(picked_card)
 '''
 
+
 #method-2 of shuffled
+
 shuffled_deck=copy.copy(deck)
 random.shuffle(shuffled_deck)
 
-print(shuffled_deck)
+
 print(deck)
+
+
 
 #record a new deck to a text file
 file_name="deck-new-54.txt"
@@ -61,7 +66,7 @@ f.close()
 
 
 #start the deal
-print('=========================cutting line===============================')
+print('-------===========<<<([{  cutting line  }])>>>============-------')
 num_of_players = 3
 card_of_player=int(len(shuffled_deck)/num_of_players)
 print('We have %d players, every one has %d cards.'
@@ -72,6 +77,7 @@ print('We have %d players, every one has %d cards.'
 player1_deck=[]
 player2_deck=[]
 player3_deck=[]
+
 
 
 for times in range(card_of_player):
